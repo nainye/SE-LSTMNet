@@ -343,10 +343,13 @@ def main():
 
     data = pd.DataFrame(FeatureStorage)
 
+    if not os.path.isdir("radiomics"):
+        os.mkdir("radiomics")
+
     if args.mode == 'train':
-        data.to_csv('train_radiomics.csv', index=False)
+        data.to_csv('radiomics/train_radiomics.csv', index=False)
     else:
-        data.to_csv('test_radiomics.csv', index=False)
+        data.to_csv('radiomics/test_radiomics.csv', index=False)
 
 if __name__ == "__main__":
     main()
