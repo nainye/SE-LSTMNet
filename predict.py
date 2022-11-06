@@ -14,9 +14,6 @@ from sklearn.metrics import roc_auc_score
 from sklearn.metrics import f1_score
 from sklearn.metrics import cohen_kappa_score
 
-import argparse
-
-parser = argparse.ArgumentParser()
 
 class PolarDataset_predicting(Dataset):
     def __init__(self, dataset):
