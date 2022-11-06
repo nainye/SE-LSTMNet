@@ -12,21 +12,40 @@ Since most people do not have any symptoms until the artery is severely narrowed
 ## 2. Materials & Methods
 ### **Dataset**
 MICCAI 2022 CarOtid vessel wall SegMentation and Atherosclerosis diagnosis challenge (COSMOS)
-![dataset](./images/dataset.png)
+
+<br/>
+
+<center><img src="./images/dataset.png" width="80%"></center>
+
+<br/>
 
 ### **Polar Conversion**
 applied to each VISTA slice based on the vessel center
-![polar_conversion](./images/polar_conversion.png)
+
+<br/>
+
+<center><img src="./images/polar_conversion.png" width="80%"></center>
+
+<br/>
 
 ### **Data Augmentation**
 1. Shift Center-point [(0,0),(2,0),(-1,0),(0,2),(0,-1)]
 2. Polar patch Rotation & Flip
 3. Low Resolution (2x down-sample followed by 2x up-sample 
-![data_augmentation](./images/data_augmentation.png)
+
+<br/>
+
+<center><img src="./images/data_augmentation.png" width="70%"></center>
+
+<br/>
 
 ### **SE-LSTMNet**
-![model](./images/SE-LSTMNet.png)
 
+<br/>
+
+<center><img src="./images/SE-LSTMNet.png" width="90%"></center>
+
+<br/>
 
 ## 3. Results
 In this paper, in order to effectively detect atherosclerotic lesions in tube-shaped blood vessels, polar conversion is applied to MRI images based on the vessel center.
