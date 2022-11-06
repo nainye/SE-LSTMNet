@@ -8,6 +8,7 @@ Atherosclerosis is a chronic vascular inflammatory disease in which plaque build
 This can lead to heart disease and stroke.
 Since most people do not have any symptoms until the artery is severely narrowed, early detection of atherosclerosis is critical.
 
+<br/>
 
 ## 2. Materials & Methods
 ### **Dataset**
