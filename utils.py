@@ -69,8 +69,6 @@ def np2nii(arr):
 
 # From cartesian image patch to polar image patch
 def topolar(car_img, rsamples = 0, thsamples = 256, intmethod = 'linear'):
-    
-    #BUG in cubic
     if rsamples==0:
         rsamples = car_img.shape[0]//2
     if len(car_img.shape)==2:
@@ -82,12 +80,10 @@ def topolar(car_img, rsamples = 0, thsamples = 256, intmethod = 'linear'):
         return
 
     SUBTH = 360/thsamples
-    height,width,channel=cimg.shape
+    channel=cimg.shape
 
     grid = UCGrid((0, cimg.shape[1]-1, cimg.shape[1]), (0, cimg.shape[0]-1, cimg.shape[0]))
 
- 
-    # filter values
     if intmethod == 'cubic':
         coeffs = filter_cubic(grid, cimg) 
     
